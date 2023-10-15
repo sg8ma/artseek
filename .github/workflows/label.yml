@@ -1,0 +1,17 @@
+name: 'priority lavel'
+
+on:
+  issues:
+    types: [closed]
+jobs:
+  remove_priority_labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-ecosystem/action-remove-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            優先度：高
+            優先度：中
+            優先度：低
