@@ -1,4 +1,4 @@
-name: 'priority lavel'
+name: 'auto delete label'
 
 on:
   issues:
