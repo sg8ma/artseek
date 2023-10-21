@@ -12,5 +12,5 @@ jobs:
         run: |
           echo "${{ secrets.SSH_KEY }}" > ssh_key
           chmod 600 ssh_key
-          ssh -oStrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} -i ssh_key "cd /var/www/test.artseek.sgym.app && git pull origin develop"
+          ssh -oStrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} -i ssh_key "cd /var/www/artseek.sgym.info && git pull origin develop --rebase"
          
